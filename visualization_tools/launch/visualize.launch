@@ -1,0 +1,8 @@
+<launch>
+	<node pkg="visualization_tools" type="visualize_navigation" name="visualization_navigation" output="screen">
+	</node>
+	<node pkg="visualization_tools" type="visualize_navigation2" name="visualization_navigation2" output="screen">
+	</node>
+	<node pkg="visualization_tools" type="visualize_navigation3" name="visualization_navigation3" output="screen">
+	</node>
+</launch>
