@@ -3,7 +3,7 @@
   <name>visualization_tools</name>
   <version>0.0.1</version>
   <description>A ROS packages for visualizing in ROS</description>
-  <maintainer email="chrkan@ltu.se">Akash Patel</maintainer>
+  <maintainer email="akapat@ltu.se">Akash Patel</maintainer>
   <license>BSD</license>
 
   

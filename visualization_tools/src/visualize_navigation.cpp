@@ -10,15 +10,15 @@ namespace visualization_tools
       : nodeHandle_(nodeHandle)
   {
 
-    odom_subscriber_ = nodeHandle_.subscribe("/hummingbird/ground_truth/odometry", 1,
+    odom_subscriber_ = nodeHandle_.subscribe("/something/odometry/imu", 1,
                                              &VisualizeNavigation::OdometryCallback, this);
     gt_traj_pub_ = nodeHandle_.advertise<nav_msgs::Path>("hummingbird/gt_path", 1);
 
-    odom_noise_subscriber_ = nodeHandle_.subscribe("/pixy/noisevalue", 1,
+    odom_noise_subscriber_ = nodeHandle_.subscribe("/something/noisevalue", 1,
                                                    &VisualizeNavigation::NoiseOdometryCallback, this);
     noise_traj_pub_ = nodeHandle_.advertise<nav_msgs::Path>("/noise_path", 1);
 
-    waypoints_subscriber_ = nodeHandle_.subscribe("/hummingbird/reference", 1,
+    waypoints_subscriber_ = nodeHandle_.subscribe("/something/reference", 1,
                                                   &VisualizeNavigation::WaypointsCallback, this);
 
     laserscan_subscriber_ = nodeHandle_.subscribe("/something/velodyne_points", 1,
